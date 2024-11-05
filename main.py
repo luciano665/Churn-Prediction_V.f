@@ -18,23 +18,23 @@ def load_model(filename):
     return pickle.load(file)
 
 #Load all models
-xgboost_model = load_model('xgb_model.pkl')
+xgboost_model = load_model('models/xgb_model.pkl')
 
-naive_bayes_model = load_model('nb_model.pkl')
+naive_bayes_model = load_model('models/nb_model.pkl')
 
-svm_model = load_model('svm_model_prob.pkl')
+svm_model = load_model('models/svm_model_prob.pkl')
 
-rf_model = load_model('rf_model.pkl')
+rf_model = load_model('models/rf_model.pkl')
 
-dt_model = load_model('dt_model.pkl')
+dt_model = load_model('models/dt_model.pkl')
 
-knn_model = load_model('knn_model.pkl')
+knn_model = load_model('models/knn_model.pkl')
 
-voting_clf_model = load_model('voting_clf_hard.pkl')
+voting_clf_model = load_model('models/voting_clf_hard.pkl')
 
-xgboost_smote_model = load_model('xgb_smote.pkl')
+xgboost_smote_model = load_model('models/xgb_smote.pkl')
 
-xgboost_feature_eng_model = load_model('xgb_featureEngineered.pkl')
+xgboost_feature_eng_model = load_model('models/xgb_featureEngineered.pkl')
 
 #Helper fucntion to prepare input data for the models
 def prepare_input(credit_score, location, gender, age, tenure, balance, num_products, has_credit_card, is_active_member, estimated_salary):
@@ -179,7 +179,7 @@ st.title("Customer Churn Prediction")
 
 #1.Read CSV file 
 
-df = pd.read_csv('churn.csv')
+df = pd.read_csv('Data/churn.csv')
 
 #2.Make a list to select customer and see datam using cutomer ID and their last name, a lambda function is used to select customerID and last name
 customers = [f"{row['CustomerId']} - {row['Surname']}" for _, row in df.iterrows()]
@@ -267,7 +267,7 @@ if selected_customer_option:
 
   st.markdown(explanation)
 
-  if ave_probability > 0.4:
+  if ave_probability > 0.35:
     email = generate_email(ave_probability, input_dict, explanation, selected_customer['Surname'])
     st.markdown("---")
     st.subheader("Personalized Email")
