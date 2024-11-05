@@ -267,10 +267,8 @@ if selected_customer_option:
 
   st.markdown(explanation)
 
-  email = generate_email(ave_probability, input_dict, explanation, selected_customer['Surname'])
-
-  st.markdown("---")
-
-  st.subheader("Personalized Email")
-
-  st.markdown(email)
+  if ave_probability > 0.4:
+    email = generate_email(ave_probability, input_dict, explanation, selected_customer['Surname'])
+    st.markdown("---")
+    st.subheader("Personalized Email")
+    st.markdown(email)
