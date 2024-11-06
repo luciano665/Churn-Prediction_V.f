@@ -54,7 +54,6 @@ def make_prediction(input_df, input_dict):
 
   probabilities = {
     'XGBoost': xgboost_model.predict_proba(input_df)[0][1],
-    'Random Forest': rf_model.predict_proba(input_df)[0][1],
     'K-Nearest Neighbors': knn_model.predict_proba(input_df)[0][1],
     "SVM" : svm_model.predict_proba(input_df)[0][1],
   }
