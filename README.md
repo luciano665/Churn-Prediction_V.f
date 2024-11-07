@@ -1,10 +1,8 @@
-# Writing the generated README content to the README.md file
 
-updated_readme_content = """
 # Churn Prediction Project
 
 ## Overview
-
+The current project is deployed using AWS ans docker.
 This project provides a machine learning model for predicting customer churn. It includes necessary scripts and configurations to deploy the model as a web application, suitable for Docker-based or local deployment. The project leverages Python with dependencies managed through Poetry.
 
 ## Directory Structure
