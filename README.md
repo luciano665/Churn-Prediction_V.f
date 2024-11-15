@@ -1,9 +1,10 @@
 
 # Churn Prediction Project
-
+## State of deployment
+The lunch time using the AWS EC2 instance was from: 2024/11/07 16:57 GMT-5 to 2024/11/15 GTM-5 8:48. Due to another current project being develop the app is not running 
 ## Overview
-The current project is deployed using AWS ans docker.
-This project provides a machine learning model for predicting customer churn. It includes necessary scripts and configurations to deploy the model as a web application, suitable for Docker-based or local deployment. The project leverages Python with dependencies managed through Poetry.
+The current project is deployed using AWS and docker.
+This project provides a machine-learning model for predicting customer churn. It includes the necessary scripts and configurations to deploy the model as a web application, suitable for Docker-based or local deployment. The project leverages Python with dependencies managed through Poetry.
 
 ## Directory Structure
 
